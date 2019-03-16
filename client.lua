@@ -5,26 +5,10 @@
 --        Forum: http://forum.devstudios.store       --
 --   Copyright 2019 ©DevStudios. All rights served   --
 -------------------------------------------------------
-function AddTextEntry(key, value)
-	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
-end
-
-Citizen.CreateThread(function()
-	while true do
-		Citizen.Wait(5000)
-		players = {}
-		for i = 0, 31 do
-			if NetworkIsPlayerActive( i ) then
-				table.insert( players, i )
-			end
-		end
-	end
-end)
-
 Citizen.CreateThread(function()
     while true do
         TriggerServerEvent("vRP:Title")
-		Citizen.Wait(1)
+		Citizen.Wait(100000000000)
 	end
 end)
 
