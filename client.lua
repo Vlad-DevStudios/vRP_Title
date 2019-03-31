@@ -5,12 +5,7 @@
 --        Forum: http://forum.devstudios.store       --
 --   Copyright 2019 ©DevStudios. All rights served   --
 -------------------------------------------------------
-Citizen.CreateThread(function()
-    while true do
-        TriggerServerEvent("vRP:Title")
-		Citizen.Wait(100000000000)
-	end
-end)
+Citizen.CreateThread(function() TriggerServerEvent("vRP:title") end)
 
 RegisterNetEvent('vRP:Title_Display')
 AddEventHandler('vRP:Title_Display', function(user_id, faction, name)
